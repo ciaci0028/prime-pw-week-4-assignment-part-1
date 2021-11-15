@@ -20,7 +20,6 @@ function helloName( name ) {
 }
 // Remember to call the function to test
 console.log( 'Testing helloName:', helloName( 'Sabrina' ) );
-helloName ( 'Daphne' );
 console.log( `Let's greet Daphne:`, helloName( 'Daphne') );
 console.log ( helloName( 'Ashley') );
 
@@ -34,10 +33,13 @@ console.log( `Let us do some addition! What is 23 plus 28?`, addNumbers( 23, 28)
 console.log( `Math is so fun! Let's do it again! What is 213423 + 34234?`, addNumbers( 213423, 34234 ) );
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( num1, num2, num3 ){
+  let answer = num1 * num2 * num3;
+  return answer;
 }
 
+console.log( `I always loved my times table! What is 9 * 4 * 3?`, multiplyThree( 9, 4, 3) );
+console.log( `Who needs a calculator when we have functions?! What is 5 * 195* 3974?`, multiplyThree( 5, 195, 3974) );
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
