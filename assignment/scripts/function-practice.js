@@ -83,13 +83,11 @@ function find( value, array ) {
   for ( var i=0, len = array.length; i < len; i++ ) {
     if ( value === array[i] ){
       console.log( `Sabrina has, in fact, lived in`, value );
-      return true;
     }
     else {
       console.log( `Sabrina has lived in many places, but never`, value );
-      return false;
     }
- }
+ } 
 }
 
 let testArray = [ 'California', 'Minnesota', 'Georgia', 'Washington' ];
@@ -108,7 +106,7 @@ find ( 'Florida', testArray );
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-    if ( letter === string.charAt(0)) {
+    if ( letter === string.charAt(0) ) {
       return true;
     }
     else {
