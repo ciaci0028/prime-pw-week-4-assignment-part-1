@@ -39,7 +39,7 @@ function multiplyThree( num1, num2, num3 ){
 }
 
 console.log( `I always loved my times table! What is 9 * 4 * 3?`, multiplyThree( 9, 4, 3) );
-console.log( `Who needs a calculator when we have functions?! What is 5 * 195* 3974?`, multiplyThree( 5, 195, 3974) );
+console.log( `Who needs a calculator when we have functions?! What is 5 * 195 * 3974?`, multiplyThree( 5, 195, 3974) );
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -62,7 +62,7 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  console.log(`What is in a list?`, array);
+  console.log(`What is in the list?`, array);
   if ( array.length > 0) {
     return array[ array.length - 1 ];
 }
@@ -80,8 +80,27 @@ console.log( `But without anything in an emptyArray:`, getLast( emptyArray ) );
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for ( let i=0; i < array.length; i++ ) {
+    if ( array[i] === value ){
+      console.log( `Sabrina has, in fact, lived in`, value );
+      return true;
+    }
+    else {
+      console.log( `Sabrina has lived in many places, but never`, value );
+      return false;
+    }
 }
+}
+
+let testArray = [ 'California', 'Minnesota', 'Georgia', 'Washington' ];
+find ( 'Minnesota', testArray );
+find ( 'Alaska', testArray );
+find ( 'California', testArray );
+find ( 'Texas', testArray );
+find ( 'Georgia', testArray );
+find ( 'New York', testArray );
+find ( 'Washginton', testArray );
+find ( 'Florida', testArray );
 
 // ----------------------
 // Stretch Goals
