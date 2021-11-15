@@ -9,7 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('Test - should say "Hello World!"', hello() );
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
