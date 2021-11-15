@@ -25,10 +25,13 @@ console.log( `Let's greet Daphne:`, helloName( 'Daphne') );
 console.log ( helloName( 'Ashley') );
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
+  let answer = firstNumber + secondNumber;
+  return answer;
   // return firstNumber + secondNumber;
 }
-
+console.log( `Let us do some addition! What is 23 plus 28?`, addNumbers( 23, 28) );
+console.log( `Math is so fun! Let's do it again! What is 213423 + 34234?`, addNumbers( 213423, 34234 ) );
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( ){
