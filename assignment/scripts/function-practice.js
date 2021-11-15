@@ -45,10 +45,13 @@ console.log( `Who needs a calculator when we have functions?! What is 5 * 195* 3
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
-  }
-    return;
-}
+    return true;
+  } //end of true
+  else {
+    return false;
+  } //end of false
+} // end of function
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
