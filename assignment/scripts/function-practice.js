@@ -123,23 +123,40 @@ console.log(find("New York", testArray));
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  if (letter === string.charAt(0)) {
+  if (letter === string.charAt(0) ) {
     return true;
-  } else {
+  } // If the letter at the first spot is the same, it's true!
+  else {
     return false;
   }
 }
+// Testing a few different options to make sure the code is working
 console.log("isFirstLetter - should say true", isFirstLetter("a", "apple"));
 console.log("isFirstLetter - should say false", isFirstLetter("z", "apple"));
 console.log("testing again", isFirstLetter("z", "zebra"));
 console.log("one last test", isFirstLetter("r", "sasquash"));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
+function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
+  for ( x = 0; x < array.length; x++ ) {
+    sum = array[x] + sum; 
+  }  
   return sum;
 }
+// I'm going to start with an empty array and push numbers in it to test as I go.
+mathArray = [];
+mathArray.push(1);
+console.log( `The current numbers are:`, mathArray );
+console.log( `Testing with 1:`, sumAll( mathArray ) );
+mathArray.push( 3 );
+mathArray.push( 6 );
+console.log( `I have pushed 3 & 6, current mathArray is:`, mathArray );
+console.log( sumAll (mathArray )); 
+
+// Now I'm going to test with a direct array
+console.log( sumAll([ 10, 27, 33 ]) );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
