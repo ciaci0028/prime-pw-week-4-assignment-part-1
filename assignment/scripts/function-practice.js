@@ -47,13 +47,11 @@ function multiplyThree(num1, num2, num3) {
 
 // Testing different problems to see how smart the computer is
 console.log( `I always loved my times table! What is 9 * 4 * 3?`, multiplyThree(9, 4, 3) );
-// I think the code looks really pretty like this (all on one line)
 
-console.log( `Who needs a calculator when we have functions?! What is 5 * 195 * 3974?`, 
-multiplyThree(5, 195, 3974) 
+console.log( 
+  `Who needs a calculator when we have functions?! What is 5 * 195 * 3974?`, 
+  multiplyThree(5, 195, 3974) 
 );
-// But 'prettier' makes it look like this... 
-// Which one is technically 'prettier' and better to use?!
 
 
 // 5. Function that will return true if a number is positive,
@@ -133,15 +131,15 @@ function isFirstLetter(letter, string) {
 // Testing a few different options to make sure the code is working
 console.log("isFirstLetter - should say true", isFirstLetter("a", "apple"));
 console.log("isFirstLetter - should say false", isFirstLetter("z", "apple"));
-console.log("testing again", isFirstLetter("z", "zebra"));
-console.log("one last test", isFirstLetter("r", "sasquash"));
+console.log("testing again, should be true", isFirstLetter("z", "zebra"));
+console.log("one last test, should be false", isFirstLetter("r", "sasquash"));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
-  let sum = 0;
+  let sum = 0; // Starting with the sum variable at zero
   // TODO: loop to add items
   for ( x = 0; x < array.length; x++ ) {
-    sum = array[x] + sum; 
+    sum += array[x] ; 
   }  
   return sum;
 }
@@ -153,10 +151,10 @@ console.log( `Testing with 1:`, sumAll( mathArray ) );
 mathArray.push( 3 );
 mathArray.push( 6 );
 console.log( `I have pushed 3 & 6, current mathArray is:`, mathArray );
-console.log( sumAll (mathArray )); 
+console.log( `the sum of which is:`, sumAll (mathArray )); 
 
 // Now I'm going to test with a direct array
-console.log( sumAll( [ 10, 27, 33 ] ) );
+console.log( `the Sum of 10, 27, and 33 is:`, sumAll( [ 10, 27, 33 ] ) );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -164,6 +162,7 @@ console.log( sumAll( [ 10, 27, 33 ] ) );
 
 function positiveNumbers (array) {
   let positiveArray = [];
+  console.log( `in positiveNumbers function` );
   for ( let number of array ){
     if ( number > 0) {
       positiveArray.push( number );
@@ -183,3 +182,5 @@ console.log( `Here are the positive numbers from the old array:`, positiveNumber
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+
