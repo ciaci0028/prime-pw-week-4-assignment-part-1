@@ -156,11 +156,29 @@ console.log( `I have pushed 3 & 6, current mathArray is:`, mathArray );
 console.log( sumAll (mathArray )); 
 
 // Now I'm going to test with a direct array
-console.log( sumAll([ 10, 27, 33 ]) );
+console.log( sumAll( [ 10, 27, 33 ] ) );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
+function positiveNumbers (array) {
+  let positiveArray = [];
+  for ( let number of array ){
+    if ( number > 0) {
+      positiveArray.push( number );
+    } 
+  }
+  return positiveArray;
+}
+
+let numbers = [ 1, 4, -6, 0, -8, 3 ];
+positiveNumbers( numbers );
+
+console.log( `Here is the unchanged, old array:`, numbers );
+console.log( `Here are the positive numbers from the old array:`, positiveNumbers( numbers ) );
+
+
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
