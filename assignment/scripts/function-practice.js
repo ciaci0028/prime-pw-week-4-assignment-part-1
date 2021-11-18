@@ -161,17 +161,19 @@ console.log( `the Sum of 10, 27, and 33 is:`, sumAll( [ 10, 27, 33 ] ) );
 //     return an empty array. Note: The input array should not change.
 
 function positiveNumbers (array) {
-  let positiveArray = [];
+  let positiveArray = []; 
+  // created an empty array to push into
   console.log( `in positiveNumbers function` );
   for ( let number of array ){
     if ( number > 0) {
       positiveArray.push( number );
-    } 
+    }  // any number greater than 0 will be pushed into the empty positiveArray
   }
   return positiveArray;
 }
 
-let numbers = [ 1, 4, -6, 0, -8, 3 ];
+let numbers = [ 1, 4, -6, 0, -8, 3 ]; 
+// we should expect that 1, 4, and 3 get pushed into positiveArray
 positiveNumbers( numbers );
 
 console.log( `Here is the unchanged, old array:`, numbers );
