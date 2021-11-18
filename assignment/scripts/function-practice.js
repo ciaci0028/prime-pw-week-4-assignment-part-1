@@ -183,4 +183,23 @@ console.log( `Here are the positive numbers from the old array:`, positiveNumber
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
 
+// On Edabit, I found a problem that asked to create a function that 
+// finds the smallest and biggest number in an array of numbers and 
+// lists them in that order. 
+// I first needed to find code that found the minimum and maximum values.
+// This can be done by using Math.min() or Math.max(). However,
+// these only work on a list of numbers, not an array. So a helpful way
+// to turn an array into a list is by using the spread (...) operator.
+// So the code looks like this:
 
+function minMax(arr) {
+	return [ Math.min(...arr), Math.max(...arr) ]; 
+}
+
+let arr1 = [1, 2, 54, 7, 24];
+let arr2 = [-5, -100, 0, 2343, 2, 565];
+let arr3 = [1, 3, 4, 6, 78, 45, 67, 45];
+
+console.log( `should get [1, 54]:`, minMax(arr1));
+console.log( `should get [-100, 2343]:`, minMax(arr2));
+console.log( `should get [1, 78]:`, minMax(arr3));
